@@ -22,6 +22,10 @@ const styles = StyleSheet.create({
   fontWeightBold: {
     fontWeight: theme.fontWeights.bold,
   },
+  link: {
+    color: theme.colors.link,
+    fontWeight: theme.fontWeights.bold,
+  },
 });
 
 const Text = ({ color, fontSize, fontWeight, style, ...props }) => {
@@ -42,4 +46,8 @@ const SubHeading = ({ ...props }) => {
   return <Text fontSize="subheading" {...props} />;
 };
 
-export { Text, SubHeading };
+const Link = ({ ...props }) => {
+  return <Text {...props} />;
+};
+
+export { Text, SubHeading, Link };
