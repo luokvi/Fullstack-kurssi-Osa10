@@ -1,9 +1,10 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import { View } from 'react-native';
+import { Text, SubHeading } from './Text';
 
 const Item = ({ item }) => (
         <View>
-            <Text>Full name: {item.fullName}</Text>
+            <SubHeading fontWeight="bold">Full name: {item.fullName}</SubHeading>
             <Text>Description: {item.description}</Text>
             <Text>Language: {item.language}</Text>
             <Text>Stars: {item.stargazersCount}</Text>
