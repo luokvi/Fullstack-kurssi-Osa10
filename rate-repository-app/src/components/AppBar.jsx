@@ -9,6 +9,7 @@ const AppBar = () => {
     return (
     <View style={theme.container}>
         <AppBarTab text="Repos"/>
+        <AppBarTab text="Another link"/>
     </View>
     );
   };

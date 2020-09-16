@@ -21,10 +21,15 @@ const theme = {
     container: {
       paddingTop: Constants.statusBarHeight,
       backgroundColor: "#24292e",
+      display: 'flex',
+      flexDirection: 'row'
     },
 
-    link: {
+    appbartab: {
       color: 'white',
+      flexGrow: 1,
+      fontWeight: '700',
+      paddingRight: 10
     }
   };
   

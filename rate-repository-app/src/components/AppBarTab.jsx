@@ -7,7 +7,7 @@ const Tab = ({ text, onPress}) => {
     return (
         <View>
             <TouchableWithoutFeedback onPress={onPress}>
-                <Text style={theme.link} fontWeight="bold">{text}</Text>
+                <Text style={theme.appbartab} >{text}</Text>
             </TouchableWithoutFeedback>
         </View>
     );
