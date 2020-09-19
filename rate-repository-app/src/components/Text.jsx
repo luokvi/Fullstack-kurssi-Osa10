@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text as NativeText, StyleSheet } from 'react-native';
+import { Text as NativeText, StyleSheet, View } from 'react-native';
 
 import theme from '../theme';
 
@@ -50,4 +50,8 @@ const Link = ({ ...props }) => {
   return <Text {...props} />;
 };
 
-export { Text, SubHeading, Link };
+const LanguageTag = ({ ...props }) => {
+  return <View style={theme.LanguageLabel}><Text style={theme.LanguageText} {...props} /></View>;
+};
+
+export { Text, SubHeading, Link, LanguageTag };
