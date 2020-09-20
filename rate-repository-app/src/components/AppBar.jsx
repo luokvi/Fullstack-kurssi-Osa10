@@ -1,15 +1,15 @@
 import React from 'react';
 import { View } from 'react-native';
 import theme from '../theme';
-import AppBarTab from './AppBarTab';
-
+import Tab from './AppBarTab';
 
 
 const AppBar = () => {
     return (
-    <View style={theme.container}>
-        <AppBarTab text="Repos"/>
-    </View>
+      <View style={theme.container}>
+        <Tab text="Repositories" linkTo="/" />
+        <Tab text="Sign In" linkTo="/signin" />
+      </View>
     );
   };
 
