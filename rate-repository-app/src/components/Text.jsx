@@ -46,12 +46,9 @@ const SubHeading = ({ ...props }) => {
   return <Text fontSize="subheading" {...props} />;
 };
 
-const Link = ({ ...props }) => {
-  return <Text {...props} />;
-};
 
 const LanguageTag = ({ ...props }) => {
   return <View style={theme.LanguageLabel}><Text style={theme.LanguageText} {...props} /></View>;
 };
 
-export { Text, SubHeading, Link, LanguageTag };
+export { Text, SubHeading, LanguageTag };
