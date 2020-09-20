@@ -1,5 +1,5 @@
 import React from 'react';
-import { View } from 'react-native';
+import { View, ScrollView } from 'react-native';
 import theme from '../theme';
 import Tab from './AppBarTab';
 
@@ -7,8 +7,11 @@ import Tab from './AppBarTab';
 const AppBar = () => {
     return (
       <View style={theme.container}>
-        <Tab text="Repositories" linkTo="/" />
-        <Tab text="Sign In" linkTo="/signin" />
+        <ScrollView horizontal>
+          <Tab text="Repositories" linkTo="/" />
+          <Tab text="Sign In" linkTo="/signin" />
+        </ScrollView>
+        
       </View>
     );
   };
