@@ -51,7 +51,7 @@ const theme = {
 
     Counter: {
       flexGrow: 1,
-      textAlign: 'center'
+      alignItems: 'center'
     },
 
     Item: {
@@ -81,8 +81,7 @@ const theme = {
     CountersContainer: {
       display: 'flex',
       flexDirection: 'row',
-      justifyContent: 'space-evenly',
-      paddingLeft: 20,
+      justifyContent: 'space-evenly'
     }
   };
   
