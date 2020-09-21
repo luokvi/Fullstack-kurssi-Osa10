@@ -60,7 +60,8 @@ const theme = {
 
     LanguageText: {
       color: 'white',
-      padding: 5
+      padding: 5,
+      textAlign: 'center'
     },
 
     LanguageLabel : {
@@ -82,6 +83,35 @@ const theme = {
       display: 'flex',
       flexDirection: 'row',
       justifyContent: 'space-evenly'
+    },
+
+    //Sign In Form
+    FormContainer: {
+      width: '100%',
+      height: 150,
+      backgroundColor: '#fff',
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+      justifyContent: 'center'
+    },
+
+    formInput: {
+      color: '#24292e',
+      borderStyle: 'solid',
+      borderWidth: 1,
+      borderColor: '#24292e',
+
+      flexGrow: 1,
+      marginBottom: 10,
+      paddingLeft: 10
+    },
+    
+    SubmitButton: {
+      backgroundColor: '#0366d6',
+      borderRadius: 50,
+      color: 'white',
+      textAlign: 'center'
     }
   };
   
