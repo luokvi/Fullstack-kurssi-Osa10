@@ -7,8 +7,31 @@ import { Text } from './Text';
 
 const styles = StyleSheet.create({
   errorText: {
-    marginTop: 5,
+    marginTop: 1,
+    color: 'red'
   },
+
+  formInputBase: {
+    color: '#24292e',
+    borderStyle: 'solid',
+    borderWidth: 1,
+    borderColor: '#24292e',
+
+    flexGrow: 1,
+    marginBottom: 10,
+    paddingLeft: 10
+  },
+
+  formError: {
+    color: 'red',
+    borderColor: 'red',
+    borderStyle: 'solid',
+    borderWidth: 1,
+
+    flexGrow: 1,
+    marginBottom: 10,
+    paddingLeft: 10
+  }
 });
 
 const FormikTextInput = ({ name, ...props }) => {
@@ -23,6 +46,7 @@ const FormikTextInput = ({ name, ...props }) => {
         value={field.value}
         error={showError}
         {...props}
+        style={showError ? styles.formError : styles.formInputBase}
       />
       {showError && <Text style={styles.errorText}>{meta.error}</Text>}
     </>

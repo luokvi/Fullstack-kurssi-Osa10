@@ -93,19 +93,10 @@ const theme = {
       display: 'flex',
       flexDirection: 'column',
       alignItems: 'center',
-      justifyContent: 'center'
+      justifyContent: 'start',
+      paddingTop: 20
     },
-
-    formInput: {
-      color: '#24292e',
-      borderStyle: 'solid',
-      borderWidth: 1,
-      borderColor: '#24292e',
-
-      flexGrow: 1,
-      marginBottom: 10,
-      paddingLeft: 10
-    },
+    
     
     SubmitButton: {
       backgroundColor: '#0366d6',
