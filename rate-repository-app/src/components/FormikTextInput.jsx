@@ -17,9 +17,12 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: '#24292e',
 
-    flexGrow: 1,
+    height: 50,
+    width: '75%',
+    flexGrow: 0,
+    alignSelf: 'center',
     marginBottom: 10,
-    paddingLeft: 10
+    paddingLeft: 10,
   },
 
   formError: {
@@ -28,7 +31,10 @@ const styles = StyleSheet.create({
     borderStyle: 'solid',
     borderWidth: 1,
 
-    flexGrow: 1,
+    height: 50,
+    width: '75%',
+    flexGrow: 0,
+    alignSelf: 'center',
     marginBottom: 10,
     paddingLeft: 10
   }

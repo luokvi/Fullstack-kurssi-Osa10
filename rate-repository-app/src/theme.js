@@ -93,12 +93,11 @@ const theme = {
     //Sign In Form
     FormContainer: {
       width: '100%',
-      height: 150,
+      height: '100%',
       backgroundColor: '#fff',
       display: 'flex',
       flexDirection: 'column',
-      alignItems: 'center',
-      justifyContent: 'start',
+      justifyContent: 'center',
       paddingTop: 20
     },
     
@@ -107,7 +106,12 @@ const theme = {
       backgroundColor: '#0366d6',
       borderRadius: 50,
       color: 'white',
-      textAlign: 'center'
+      textAlign: 'center',
+      alignSelf: 'center',
+      width: '75%',
+      height: 30,
+      paddingTop: 5,
+      margin: 'auto'
     }
   };
   
