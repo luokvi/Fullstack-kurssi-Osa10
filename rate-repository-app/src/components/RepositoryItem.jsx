@@ -5,7 +5,7 @@ import theme from '../theme';
 
 const Img = ({source}) => {
     return(
-        <Image source={source} style={{width: 50, height: 50, margin: 10}}/>
+        <Image source={{uri: source}} style={{width: 50, height: 50, margin: 10}}/>
     );
 };
 
