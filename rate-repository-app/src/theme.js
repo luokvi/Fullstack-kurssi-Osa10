@@ -34,7 +34,7 @@ const theme = {
       color: 'white',
       flexGrow: 1,
       fontWeight: '700',
-      paddingRight: 10
+      paddingLeft: 10
     },
 
     body: {
@@ -46,7 +46,8 @@ const theme = {
 
     FlexColumn: {
       display: 'flex',
-      flexDirection: 'column'
+      flexDirection: 'column',
+      width: '85%'
     },
 
     FlexRow: {
@@ -65,14 +66,17 @@ const theme = {
 
     LanguageText: {
       color: 'white',
-      padding: 5,
+      paddingLeft: 10,
+      paddingRight: 10,
+      paddingTop: 5,
+      paddingBottom: 5,
       textAlign: 'center'
     },
 
     LanguageLabel : {
       backgroundColor: '#0366d6',
-      width: '50%',
-      borderRadius: 50,
+      width: '30%',
+      borderRadius: 20,
     },
 
     RepositoryItemCard: {
@@ -81,7 +85,8 @@ const theme = {
       backgroundColor: '#fff',
       display: 'flex',
       flexDirection: 'column',
-      justifyContent: 'space-evenly'
+      justifyContent: 'space-evenly',
+      alignSelf: 'center'
     },
 
     CountersContainer: {
