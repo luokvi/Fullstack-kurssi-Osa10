@@ -6,8 +6,8 @@ import { Link } from 'react-router-native';
 
 const Tab = ({ text, onPress, linkTo}) => {
     return (
-      <TouchableWithoutFeedback onPress={onPress}>
-        <Link to={linkTo} component={TouchableOpacity} activeOpacity={0.5}>
+      <TouchableWithoutFeedback>
+        <Link to={linkTo} component={TouchableOpacity} activeOpacity={0.5} onPress={onPress}>
           <Text style={theme.appbartab}>
             {text}
           </Text>
