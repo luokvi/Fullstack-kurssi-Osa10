@@ -49,6 +49,7 @@ const SignIn = () => {
     try {
       const { data } = await signIn({ username, password });
       console.log('data from sign in:', data);
+      history.push('/');
 
     } catch (e) {
       console.log(e);
@@ -56,7 +57,6 @@ const SignIn = () => {
     
     values.username = '';
     values.password = '';
-    history.push('/');
   };
 
   return (
