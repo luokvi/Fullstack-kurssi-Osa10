@@ -1,7 +1,9 @@
 import React from 'react';
-import { View, Image } from 'react-native';
+import { View, Image, TouchableOpacity } from 'react-native';
 import { Text, SubHeading, LanguageTag } from './Text';
+import LinkButton from './ExternalLinkButton';
 import theme from '../theme';
+import { useHistory } from 'react-router-native';
 
 const Img = ({source}) => {
     return(
@@ -39,19 +41,53 @@ const Counter = ({ number, label }) => {
     );
 };
 
-const Item = ({ item }) => (
-        <View style={theme.RepositoryItemCard}>
-            <View style={theme.FlexRow}>
-              <Img source={item.ownerAvatarUrl} style={theme.Item} />
-              <Info name={item.fullName} description={item.description} language={item.language} style={theme.Item}/>
-            </View>
-            <View style={theme.CountersContainer}>
-              <Counter number={item.stargazersCount} label={"Stars"}/>
-              <Counter number={item.forksCount} label={"Forks"}/>
-              <Counter number={item.reviewCount} label={"Reviews"}/>
-              <Counter number={item.ratingAverage} label={"Rating"}/>
-            </View>
+const Base = ({ item }) => {
+  return(
+    <View>
+          <View style={theme.FlexRow}>
+            <Img source={item.ownerAvatarUrl} style={theme.Item} />
+            <Info name={item.fullName} description={item.description} language={item.language} style={theme.Item}/>
+          </View>
+          <View style={theme.CountersContainer}>
+            <Counter number={item.stargazersCount} label={"Stars"}/>
+            <Counter number={item.forksCount} label={"Forks"}/>
+            <Counter number={item.reviewCount} label={"Reviews"}/>
+            <Counter number={item.ratingAverage} label={"Rating"}/>
+          </View>
+          </View>
+  );
+};
+
+
+const Item = ({ item, singleView }) => {
+  const history = useHistory();
+
+  function onPress () {
+    const id = item.id;
+    history.push(`/${id}`);
+  }
+
+  if (singleView){
+    return (
+      <View style={theme.RepositoryItemCard}>
+          <Base item={item} />
+            { singleView ?
+              <LinkButton linkTo={item.url}>
+                {"Open in GitHub"}
+              </LinkButton>
+              : null
+            }
         </View>
-);
+    );
+  }
+
+  return (
+        <View style={theme.RepositoryItemCard}>
+          <TouchableOpacity onPress={onPress}>
+            <Base item={item} />
+          </TouchableOpacity>
+        </View>
+  );
+  };
 
 export default Item;
