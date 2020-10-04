@@ -99,6 +99,12 @@ const theme = {
       justifyContent: 'space-evenly'
     },
 
+    orderSelection: {
+      backgroundColor: '#fff',
+      paddingTop: 5,
+      paddingBottom: 5,
+    },
+
     //Sign In Form
     FormContainer: {
       width: '100%',
