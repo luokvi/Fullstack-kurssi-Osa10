@@ -42,6 +42,10 @@ const theme = {
       height: '100%'
     },
 
+    separator: {
+      height: 10,
+    },
+
     //RepositoryItems
 
     FlexColumn: {
@@ -117,6 +121,40 @@ const theme = {
       height: 30,
       paddingTop: 5,
       margin: 'auto'
+    },
+
+    //Repository Reviews
+
+    ReviewCard: {
+      width: '100%',
+      height: 200,
+      backgroundColor: '#fff',
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'space-evenly'
+    },
+
+    reviewScore: {
+      width: 50,
+      height: 50,
+      borderRadius: 25,
+      borderStyle: 'solid',
+      borderWidth: 2,
+      borderColor: '#0366d6',
+      marginTop: 10,
+      marginRight: 10,
+      marginLeft: 10,
+    },
+
+    scoreText: {
+      color: '#0366d6',
+      paddingTop: 14,
+      textAlign: 'center',
+    },
+
+    reviewText: {
+      width: '90%',
+      flexGrow: 1
     }
   };
   

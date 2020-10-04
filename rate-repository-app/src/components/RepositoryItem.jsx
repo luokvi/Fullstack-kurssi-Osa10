@@ -54,7 +54,7 @@ const Base = ({ item }) => {
             <Counter number={item.reviewCount} label={"Reviews"}/>
             <Counter number={item.ratingAverage} label={"Rating"}/>
           </View>
-          </View>
+    </View>
   );
 };
 
@@ -71,12 +71,9 @@ const Item = ({ item, singleView }) => {
     return (
       <View style={theme.RepositoryItemCard}>
           <Base item={item} />
-            { singleView ?
-              <LinkButton linkTo={item.url}>
-                {"Open in GitHub"}
-              </LinkButton>
-              : null
-            }
+            <LinkButton linkTo={item.url}>
+              {"Open in GitHub"}
+            </LinkButton>
         </View>
     );
   }
